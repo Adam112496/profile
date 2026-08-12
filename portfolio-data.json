@@ -290,10 +290,12 @@
       "role": "Software Development Intern",
       "period": "Jan 2026 – Apr 2026",
       "responsibilities": [
-        "Developed and maintained web applications using React.js and Node.js",
-        "Collaborated with cross-functional teams on agile development sprints",
-        "Implemented RESTful APIs and integrated third-party services",
-        "Participated in code reviews and contributed to documentation"
+        "Developed a blockchain-based donation web application using Quasar Framework and Django.",
+        "Implemented RESTful APIs and integrated Paytaca wallet and QR code payment functionality.",
+        "Worked with CashScript smart contracts for blockchain-based donation transactions.",
+        "Collaborated with the development team on frontend, backend integration, testing, and debugging.",
+        "Used Git and Docker for version control and development.",
+        "Participated in code reviews and contributed to technical documentation."
       ]
     }
   ]
