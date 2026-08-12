@@ -1,0 +1,300 @@
+{
+  "name": "Ambert R. Cordero",
+  "title": "Full-Stack Developer | Mobile & Web Application Developer",
+  "location": "Naparaan, Salcedo Eastern Samar",
+  "email": "ambert.cordero.dev@gmail.com",
+  "phone": "+63 912 345 6789",
+  "linkedin": "https://linkedin.com/in/ambertcordero",
+  "github": "https://github.com/ambertcordero",
+  "education": {
+    "school": "Eastern Samar State University-Salcedo",
+    "degree": "Bachelor of Science in Information Technology",
+    "year": "2021 – 2025"
+  },
+  "awards": [
+    "Best in OJT — ESSU- SAlcedo 2026"
+  ],
+  "skills": {
+    "frontend": [
+      "React.js",
+      "Nuxt.js",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "Django",
+      "PHP",
+      "REST APIs"
+    ],
+    "database_tools": [
+      "PostgreSQL",
+      "SQLite",
+      "MySQL",
+      "Git",
+      "Docker",
+      "Figma",
+      "Postman"
+    ]
+  },
+  "projects": [
+    {
+      "id": "touch-learn",
+      "name": "Touch Learn",
+      "description": "Interactive educational Android app designed to help users learn about computer hardware components and their functions.",
+      "longDescription": "An Android educational application focused on computer hardware components. The app provides interactive learning materials about components such as the CPU, RAM, motherboard, storage devices, power supply, GPU, and other essential computer parts, helping users understand their functions, features, and roles in a computer system.",
+      "tags": [
+        "Android",
+        "Kotlin",
+        "SQLite"
+      ],
+      "filters": [
+        "android",
+        "mobile"
+      ],
+      "category": "mobile",
+      "images": [
+        "assets/projects/touch.png",
+        "assets/projects/touch",
+        "assets/projects/touch.png"
+      ],
+      "features": [
+        "Tactile learning modules for special needs education",
+        "Progress tracking and session reports",
+        "Offline-first with SQLite storage",
+        "Accessible UI with audio and visual feedback"
+      ],
+      "github": "https://github.com/ambertcordero",
+      "demo": "#",
+      "year": "2024"
+    },
+    {
+      "id": "kiddo-wise",
+      "name": "Kiddo Wise",
+      "description": "Mobile learning app for young children with fun activities, quizzes, and parent-guided progress monitoring.",
+      "longDescription": "Kiddo Wise is an Android educational app that helps children learn through games, stories, and interactive quizzes. Parents can track learning progress and customize content based on their child's age and skill level.",
+      "tags": [
+        "Android",
+        "Kotlin",
+        "Firebase"
+      ],
+      "filters": [
+        "android",
+        "mobile"
+      ],
+      "category": "mobile",
+      "images": [
+        "assets/projects/kiddo.png",
+        "assets/projects/kiddo.png",
+        "assets/projects/kiddo.png"
+      ],
+      "features": [
+        "Age-appropriate learning games and quizzes",
+        "Parent dashboard with progress reports",
+        "Offline content packs for learning on the go",
+        "Reward system to motivate young learners"
+      ],
+      "github": "https://github.com/ambertcordero",
+      "demo": "#",
+      "year": "2024"
+    },
+    {
+      "id": "cacao-bean-detector",
+      "name": "Cacao Bean Detector",
+      "description": "AI-powered mobile app that detects and classifies cacao bean quality using image recognition.",
+      "longDescription": "Cacao Bean Detector uses computer vision on Android to analyze cacao bean samples, classify quality grades, and help farmers and buyers make faster sorting decisions in the field.",
+      "tags": [
+        "Android",
+        "Python",
+        "TensorFlow"
+      ],
+      "filters": [
+        "android",
+        "mobile",
+        "ai"
+      ],
+      "category": "mobile",
+      "images": [
+        "assets/projects/cacao.png",
+        "assets/projects/cacao.png",
+        "assets/projects/cacao.png"
+      ],
+      "features": [
+        "Real-time cacao bean quality classification",
+        "Camera-based detection with ML models",
+        "Quality grade reports and history",
+        "Designed for farmers and agricultural use"
+      ],
+      "github": "https://github.com/ambertcordero",
+      "demo": "#",
+      "year": "2025"
+    },
+    {
+      "id": "tracer",
+      "name": "Tracer",
+      "description": "Mobile tracking app for monitoring locations, routes, and delivery or field activity in real time.",
+      "longDescription": "Tracer is an Android application for GPS-based tracking, route logging, and activity monitoring. Useful for logistics, field work, and personal route history with map visualization.",
+      "tags": [
+        "Android",
+        "Kotlin",
+        "Google Maps"
+      ],
+      "filters": [
+        "android",
+        "mobile"
+      ],
+      "category": "mobile",
+      "images": [
+        "assets/projects/tracer.png",
+        "assets/projects/tracer.png",
+        "assets/projects/tracer.png"
+      ],
+      "features": [
+        "Live GPS tracking and route mapping",
+        "Trip history with timestamps",
+        "Map integration for location visualization",
+        "Lightweight offline route caching"
+      ],
+      "github": "https://github.com/ambertcordero",
+      "demo": "#",
+      "year": "2024"
+    },
+    {
+      "id": "waray-wise",
+      "name": "Waray Wise",
+      "description": "Language learning app focused on Waray vocabulary, phrases, and cultural lessons for beginners.",
+      "longDescription": "Waray Wise helps users learn the Waray language through flashcards, pronunciation guides, daily lessons, and quizzes. The app promotes local language preservation with an easy-to-use mobile interface.",
+      "tags": [
+        "Android",
+        "Kotlin",
+        "SQLite"
+      ],
+      "filters": [
+        "android",
+        "mobile"
+      ],
+      "category": "mobile",
+      "images": [
+        "assets/projects/waray.png",
+        "assets/projects/waray.png",
+        "assets/projects/waray.png"
+      ],
+      "features": [
+        "Waray vocabulary and phrase lessons",
+        "Audio pronunciation guides",
+        "Daily quizzes and streak tracking",
+        "Offline lesson packs for study anywhere"
+      ],
+      "github": "https://github.com/ambertcordero",
+      "demo": "#",
+      "year": "2024"
+    },
+    {
+      "id": "als-app",
+      "name": "ALS App",
+      "description": "Alternative Learning System mobile app supporting out-of-school youth with modules and assessments.",
+      "longDescription": "The ALS App delivers Alternative Learning System modules on mobile devices, helping learners access lessons, submit activities, and track completion progress outside the traditional classroom.",
+      "tags": [
+        "Android",
+        "Kotlin",
+        "SQLite"
+      ],
+      "filters": [
+        "android",
+        "mobile"
+      ],
+      "category": "mobile",
+      "images": [
+        "assets/projects/als.png",
+        "assets/projects/als.png",
+        "assets/projects/als-app-3.png"
+      ],
+      "features": [
+        "ALS module delivery on mobile devices",
+        "Activity submissions and progress tracking",
+        "Offline access to learning materials",
+        "Learner-friendly interface for all ages"
+      ],
+      "github": "https://github.com/ambertcordero",
+      "demo": "#",
+      "year": "2025"
+    },
+    {
+      "id": "vision-diet",
+      "name": "Vision Diet",
+      "description": "AI-powered nutrition tracking app that uses computer vision to identify food items and calculate nutritional information.",
+      "longDescription": "Vision Diet leverages computer vision and machine learning to identify food from camera input and estimate nutritional values. The app helps users track daily intake with minimal manual entry.",
+      "tags": [
+        "React.js",
+        "Python",
+        "TensorFlow"
+      ],
+      "filters": [
+        "android",
+        "mobile",
+        "ai"
+      ],
+      "category": "mobile",
+      "images": [
+        "assets/projects/vision.png",
+        "assets/projects/vision.png",
+        "assets/projects/vision.png"
+      ],
+      "features": [
+        "Food recognition using TensorFlow models",
+        "Automatic calorie and macro estimation",
+        "Daily nutrition dashboard",
+        "Meal history and weekly summaries"
+      ],
+      "github": "https://github.com/ambertcordero",
+      "demo": "#",
+      "year": "2025"
+    },
+    {
+      "id": "pathfolio",
+      "name": "Pathfolio",
+      "description": "Career path planning platform that helps students and professionals map their career journey with personalized recommendations.",
+      "longDescription": "Pathfolio is a web platform that guides users through career planning with skill assessments, personalized roadmaps, and resource recommendations. Built with a modern React frontend and Node.js API backend.",
+      "tags": [
+        "React.js",
+        "Node.js",
+        "PostgreSQL"
+      ],
+      "filters": [
+        "web",
+        "mobile"
+      ],
+      "category": "web",
+      "images": [
+        "assets/projects/path1.png",
+        "assets/projects/path1.png",
+        "assets/projects/path1.png"
+      ],
+      "features": [
+        "Personalized career roadmap generator",
+        "Skill gap analysis and recommendations",
+        "User profiles with progress tracking",
+        "RESTful API with PostgreSQL database"
+      ],
+      "github": "https://github.com/ambertcordero",
+      "demo": "#",
+      "year": "2024"
+    }
+  ],
+  "experience": [
+    {
+      "company": "SciBiz Informatics Inc.",
+      "role": "Software Development Intern",
+      "period": "Jan 2026 – Apr 2026",
+      "responsibilities": [
+        "Developed and maintained web applications using React.js and Node.js",
+        "Collaborated with cross-functional teams on agile development sprints",
+        "Implemented RESTful APIs and integrated third-party services",
+        "Participated in code reviews and contributed to documentation"
+      ]
+    }
+  ]
+}

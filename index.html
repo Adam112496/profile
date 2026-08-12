@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ambert R. Cordero — Full-Stack Developer | Mobile & Web Application Developer">
+  <title>AMBERT R. CORDERO | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="app" id="app">
+
+    <!-- Activity Bar -->
+    <nav class="activity-bar" aria-label="Activity Bar">
+      <button class="activity-btn active" data-panel="explorer" title="Explorer" aria-label="Explorer">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z" />
+        </svg>
+      </button>
+      <button class="activity-btn" data-panel="search" title="Search" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+      </button>
+      <button class="activity-btn" data-panel="source-control" title="Source Control" aria-label="Source Control">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="18" cy="18" r="3" />
+          <circle cx="6" cy="6" r="3" />
+          <path d="M6 21V9a9 9 0 0 0 9 9" />
+        </svg>
+      </button>
+      <button class="activity-btn" data-panel="run-debug" title="Run and Debug" aria-label="Run and Debug">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </button>
+      <button class="activity-btn" data-panel="extensions" title="Extensions" aria-label="Extensions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7" />
+          <rect x="14" y="3" width="7" height="7" />
+          <rect x="3" y="14" width="7" height="7" />
+          <rect x="14" y="14" width="7" height="7" />
+        </svg>
+      </button>
+      <div class="activity-spacer"></div>
+      <button class="activity-btn theme-toggle" id="themeToggle" title="Toggle Theme" aria-label="Toggle Theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-panel active" data-panel="explorer">
+        <div class="sidebar-header">
+          <span>EXPLORER</span>
+          <button class="sidebar-collapse-btn" id="sidebarCollapse" title="Collapse Sidebar"
+            aria-label="Collapse Sidebar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="sidebar-content">
+          <!-- PORTFOLIO folder -->
+          <div class="tree-section">
+            <button class="tree-folder open" data-folder="portfolio">
+              <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+              </svg>
+              <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
+              </svg>
+              <span>PORTFOLIO</span>
+            </button>
+            <ul class="tree-files" data-folder-content="portfolio">
+              <li><button class="tree-file active" data-tab="home" data-file="01_HOME.html"><span
+                    class="file-num">01</span><span class="file-icon home">&#8962;</span> HOME</button></li>
+              <li><button class="tree-file" data-tab="about" data-file="02_ABOUT_ME.html"><span
+                    class="file-num">02</span><span class="file-icon user">&#9786;</span> ABOUT_ME</button></li>
+              <li><button class="tree-file" data-tab="projects" data-file="03_PROJECTS.html"><span
+                    class="file-num">03</span><span class="file-icon folder">&#128193;</span> PROJECTS</button></li>
+              <li><button class="tree-file" data-tab="skills" data-file="04_SKILLS.html"><span
+                    class="file-num">04</span><span class="file-icon code">&lt;/&gt;</span> SKILLS</button></li>
+              <li><button class="tree-file" data-tab="experience" data-file="05_EXPERIENCE.html"><span
+                    class="file-num">05</span><span class="file-icon brief">&#128188;</span> EXPERIENCE</button></li>
+              <li><button class="tree-file" data-tab="education" data-file="06_EDUCATION.html"><span
+                    class="file-num">06</span><span class="file-icon edu">&#127891;</span> EDUCATION</button></li>
+              <li><button class="tree-file" data-tab="certifications" data-file="07_CERTIFICATIONS.html"><span
+                    class="file-num">07</span><span class="file-icon cert">&#127942;</span> CERTIFICATIONS</button></li>
+              <li><button class="tree-file" data-tab="contact" data-file="08_CONTACT.html"><span
+                    class="file-num">08</span><span class="file-icon mail">&#9993;</span> CONTACT</button></li>
+            </ul>
+          </div>
+
+          <!-- OTHER FILES folder -->
+          <div class="tree-section">
+            <button class="tree-folder open" data-folder="other">
+              <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+              </svg>
+              <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
+              </svg>
+              <span>OTHER_FILES</span>
+            </button>
+            <ul class="tree-files" data-folder-content="other">
+              <li><a class="tree-file link" href="assets/resume.pdf" target="_blank" rel="noopener"><span
+                    class="file-icon pdf">&#128196;</span> resume.pdf</a></li>
+              <li><a class="tree-file link" href="assets/cover_letter.pdf" target="_blank" rel="noopener"><span
+                    class="file-icon pdf">&#128196;</span> cover_letter.pdf</a></li>
+              <li><button class="tree-file" data-tab="data" data-file="portfolio-data.json"><span
+                    class="file-icon json">{ }</span> portfolio-data.json</button></li>
+              <li><button class="tree-file" data-tab="readme" data-file="README.md"><span
+                    class="file-icon md">&#9776;</span> README.md</button></li>
+            </ul>
+          </div>
+
+          <!-- OUTLINE -->
+          <div class="tree-section outline-section">
+            <button class="tree-folder open" data-folder="outline">
+              <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+              </svg>
+              <span>OUTLINE</span>
+            </button>
+            <ul class="tree-files outline-links" data-folder-content="outline">
+              <li><button class="outline-link" data-scroll="about">About Me</button></li>
+              <li><button class="outline-link" data-scroll="projects">Projects</button></li>
+              <li><button class="outline-link" data-scroll="experience">Experience</button></li>
+              <li><button class="outline-link" data-scroll="education">Education</button></li>
+              <li><button class="outline-link" data-scroll="certifications">Certifications</button></li>
+              <li><button class="outline-link" data-scroll="contact">Contact</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Panel -->
+      <div class="sidebar-panel" data-panel="search">
+        <div class="sidebar-header"><span>SEARCH</span></div>
+        <div class="sidebar-content search-panel">
+          <input type="text" class="search-input" id="searchInput" placeholder="Search portfolio..."
+            aria-label="Search portfolio">
+          <div class="search-results" id="searchResults"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Sidebar Overlay (mobile) -->
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+    <!-- Main Editor Area -->
+    <main class="editor-area">
+      <!-- Mobile Toolbar -->
+      <div class="mobile-toolbar" id="mobileToolbar">
+        <button class="mobile-toolbar-btn" id="mobileMenuBtn" type="button" aria-label="Open explorer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          </svg>
+        </button>
+        <span class="mobile-toolbar-title" id="mobileTitle">index.html</span>
+        <button class="mobile-toolbar-btn" id="mobilePanelBtn" type="button" aria-label="Open skills panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <path d="M15 3v18" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Tab Bar -->
+      <div class="tab-bar" id="tabBar">
+        <div class="tab active" data-tab="home">
+          <span class="tab-icon html">&lt;&gt;</span>
+          <span class="tab-label">index.html</span>
+          <button class="tab-close" aria-label="Close tab">&times;</button>
+        </div>
+      </div>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <span>portfolio</span>
+        <span class="sep">&rsaquo;</span>
+        <span id="breadcrumbFile">01_HOME.html</span>
+      </div>
+
+      <!-- Editor Content -->
+      <div class="editor-content" id="editorContent">
+
+        <!-- HOME Tab -->
+        <section class="tab-panel active" id="panel-home" data-tab="home">
+          <div class="hero">
+            <div class="hero-text">
+              <p class="hero-greeting">Hi, I'm</p>
+              <h1 class="hero-name">AMBERT R. CORDERO</h1>
+              <p class="hero-title">Full-Stack Developer | Mobile &amp; Web Application Developer</p>
+              <p class="hero-bio">A passionate BSIT graduate who loves building clean, efficient, and user-friendly
+                applications. I specialize in full-stack development with a focus on mobile and web technologies.</p>
+              <div class="hero-actions">
+                <button class="btn btn-primary" data-scroll="projects">
+                  <span class="btn-icon">&gt;_</span> View My Work
+                </button>
+                <a class="btn btn-secondary" href="assets/resume.pdf" target="_blank" rel="noopener">
+                  <span class="btn-icon">&#8681;</span> Download Resume
+                </a>
+              </div>
+            </div>
+            <div class="hero-image">
+              <div class="profile-frame">
+                <img src="assets/passport.jpg" alt="Ambert R. Cordero"
+                  onerror="this.onerror=null;this.src='assets/profile-placeholder.svg'">
+                <div class="availability-badge">
+                  <span class="status-dot"></span> Available for work
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Projects -->
+          <div class="section-block" id="section-projects">
+            <div class="section-header">
+              <h2><span class="code-tag">&lt;/&gt;</span> FEATURED PROJECTS</h2>
+              <span class="code-comment">// Some of my recent works</span>
+            </div>
+            <div class="filter-bar" id="projectFilter">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="android">Android</button>
+              <button class="filter-btn" data-filter="web">Web</button>
+              <button class="filter-btn" data-filter="mobile">Mobile</button>
+              <button class="filter-btn" data-filter="ai">AI/ML</button>
+            </div>
+            <div class="projects-carousel-wrap">
+              <button type="button" class="projects-carousel-btn projects-carousel-prev" id="homeProjectsPrev"
+                aria-label="Previous projects">&#8249;</button>
+              <div class="projects-carousel-viewport">
+                <div class="projects-carousel-track" id="projectsCarouselTrack"></div>
+              </div>
+              <button type="button" class="projects-carousel-btn projects-carousel-next" id="homeProjectsNext"
+                aria-label="Next projects">&#8250;</button>
+            </div>
+            <div class="projects-carousel-footer">
+              <span class="projects-carousel-status" id="homeProjectsStatus"></span>
+              <button type="button" class="btn btn-secondary view-all-projects" id="viewAllProjectsBtn">
+                View All Projects &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Experience Highlights -->
+          <div class="section-block" id="section-experience">
+            <div class="section-header">
+              <h2>EXPERIENCE HIGHLIGHTS</h2>
+              <span class="code-comment">// More in resume.pdf</span>
+            </div>
+            <div class="experience-card">
+              <div class="exp-header">
+                <div>
+                  <h3>SciBiz Informatics Inc.</h3>
+                  <p class="exp-role">Software Development Intern</p>
+                </div>
+                <span class="exp-date">Jan 2025 – Apr 2025</span>
+              </div>
+              <ul class="exp-list">
+                <li>Developed and maintained web applications using React.js and Node.js</li>
+                <li>Collaborated with cross-functional teams on agile development sprints</li>
+                <li>Implemented RESTful APIs and integrated third-party services</li>
+                <li>Participated in code reviews and contributed to documentation</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT Tab -->
+        <section class="tab-panel" id="panel-about" data-tab="about">
+          <div class="content-page">
+            <h2><span class="code-tag">&lt;/&gt;</span> ABOUT ME</h2>
+            <span class="code-comment">// Get to know me</span>
+            <div class="about-content">
+              <p>Hello! I'm <strong>Ambert R. Cordero</strong>, a Full-Stack Developer with a passion for creating
+                innovative mobile and web applications. I graduated with a Bachelor of Science in Information Technology
+                and have been continuously expanding my skills in modern development technologies.</p>
+              <p>I enjoy solving complex problems and turning ideas into functional, beautiful software. My approach
+                combines clean code practices with user-centered design to deliver applications that make a real impact.
+              </p>
+              <p>When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and
+                staying up-to-date with industry trends.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJECTS Tab -->
+        <section class="tab-panel" id="panel-projects" data-tab="projects">
+          <div class="content-page">
+            <h2><span class="code-tag">&lt;/&gt;</span> ALL PROJECTS</h2>
+            <span class="code-comment">// Complete project portfolio</span>
+            <div class="filter-bar" id="projectFilterAll">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="android">Android</button>
+              <button class="filter-btn" data-filter="web">Web</button>
+              <button class="filter-btn" data-filter="mobile">Mobile</button>
+              <button class="filter-btn" data-filter="ai">AI/ML</button>
+            </div>
+            <div class="projects-grid projects-grid-full" id="projectsGridAll">
+              <!-- Cloned via JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- SKILLS Tab -->
+        <section class="tab-panel" id="panel-skills" data-tab="skills">
+          <div class="content-page">
+            <h2><span class="code-tag">&lt;/&gt;</span> SKILLS</h2>
+            <span class="code-comment">// Technical expertise</span>
+            <div class="skills-full-grid" id="skillsFullGrid"></div>
+          </div>
+        </section>
+
+        <!-- EXPERIENCE Tab -->
+        <section class="tab-panel" id="panel-experience" data-tab="experience">
+          <div class="content-page">
+            <h2>EXPERIENCE</h2>
+            <span class="code-comment">// Professional journey</span>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content experience-card">
+                  <div class="exp-header">
+                    <div>
+                      <h3>SciBiz Informatics Inc.</h3>
+                      <p class="exp-role">Software Development Intern</p>
+                    </div>
+                    <span class="exp-date">Jan 2025 – Apr 2025</span>
+                  </div>
+                  <ul class="exp-list">
+                    <li>Developed and maintained web applications using React.js and Node.js</li>
+                    <li>Collaborated with cross-functional teams on agile development sprints</li>
+                    <li>Implemented RESTful APIs and integrated third-party services</li>
+                    <li>Participated in code reviews and contributed to documentation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- EDUCATION Tab -->
+        <section class="tab-panel" id="panel-education" data-tab="education">
+          <div class="content-page">
+            <h2>EDUCATION</h2>
+            <span class="code-comment">// Academic background</span>
+            <div class="education-card">
+              <h3>Eastern Samar State University - Salcedo (ESSU)</h3>
+              <p class="edu-degree">Bachelor of Science in Information Technology</p>
+              <span class="exp-date">2021 – 2025</span>
+              <p class="edu-desc">Focused on software development, database management, and mobile application
+                development. Active member of the IT student organization.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATIONS Tab -->
+        <section class="tab-panel" id="panel-certifications" data-tab="certifications">
+          <div class="content-page">
+            <h2>CERTIFICATIONS</h2>
+            <span class="code-comment">// Professional credentials</span>
+            <div class="cert-grid">
+              <div class="cert-card">
+                <span class="cert-icon">&#127942;</span>
+                <h3>Best Capstone Project</h3>
+                <p>ESSU-Salcedo IT Department — 2025</p>
+              </div>
+              <div class="cert-card">
+                <span class="cert-icon">&#128218;</span>
+                <h3>Web Development Bootcamp</h3>
+                <p>Online Certification — 2024</p>
+              </div>
+              <div class="cert-card">
+                <span class="cert-icon">&#128241;</span>
+                <h3>Android Development</h3>
+                <p>Google Developer Training — 2024</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT Tab -->
+        <section class="tab-panel" id="panel-contact" data-tab="contact">
+          <div class="content-page">
+            <h2>CONTACT</h2>
+            <span class="code-comment">// Let's connect</span>
+            <div class="contact-grid">
+              <a href="mailto:corderoambert1996@gmail.com" class="contact-card">
+                <span class="contact-icon">&#9993;</span>
+                <div>
+                  <strong>Email</strong>
+                  <p>corderoambert1996@gmail.com</p>
+                </div>
+              </a>
+              <a href="tel:+639123456789" class="contact-card">
+                <span class="contact-icon">&#128222;</span>
+                <div>
+                  <strong>Phone</strong>
+                  <p>+63 912 345 6789</p>
+                </div>
+              </a>
+              <a href="https://linkedin.com/in/ambertcordero" target="_blank" rel="noopener" class="contact-card">
+                <span class="contact-icon linkedin">in</span>
+                <div>
+                  <strong>LinkedIn</strong>
+                  <p>/in/ambertcordero</p>
+                </div>
+              </a>
+              <a href="https://github.com/ambertcordero" target="_blank" rel="noopener" class="contact-card">
+                <span class="contact-icon github">&#9679;</span>
+                <div>
+                  <strong>GitHub</strong>
+                  <p>/ambertcordero</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- DATA Tab -->
+        <section class="tab-panel" id="panel-data" data-tab="data">
+          <div class="content-page json-view">
+            <pre id="jsonDisplay"></pre>
+          </div>
+        </section>
+
+        <!-- README Tab -->
+        <section class="tab-panel" id="panel-readme" data-tab="readme">
+          <div class="content-page readme-view">
+            <h1># Ambert R. Cordero — Portfolio</h1>
+            <p>A VS Code-themed static portfolio website built with HTML5, CSS3, and JavaScript.</p>
+            <h2>## Features</h2>
+            <ul>
+              <li>VS Code-inspired 3-column layout</li>
+              <li>Interactive file explorer sidebar</li>
+              <li>Tab-based navigation</li>
+              <li>Project filtering by technology</li>
+              <li>Dark/Light theme toggle</li>
+              <li>Responsive design</li>
+            </ul>
+            <h2>## Tech Stack</h2>
+            <ul>
+              <li>HTML5, CSS3, Vanilla JavaScript</li>
+              <li>No frameworks or build tools required</li>
+            </ul>
+            <h2>## Usage</h2>
+            <p>Open <code>index.html</code> in your browser or serve via XAMPP/any static server.</p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="right-sidebar" id="rightSidebar">
+      <div class="right-panel">
+        <div class="right-header">SKILLS</div>
+        <div class="skills-section">
+          <h4>FRONTEND</h4>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-logo react">&#9883;</span> React.js</div>
+            <div class="skill-item"><span class="skill-logo nuxt">N</span> Nuxt.js</div>
+            <div class="skill-item"><span class="skill-logo html5">5</span> HTML5</div>
+            <div class="skill-item"><span class="skill-logo css3">3</span> CSS3</div>
+            <div class="skill-item"><span class="skill-logo js">JS</span> JavaScript</div>
+            <div class="skill-item"><span class="skill-logo tailwind">T</span> Tailwind CSS</div>
+          </div>
+        </div>
+        <div class="skills-section">
+          <h4>BACKEND</h4>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-logo node">N</span> Node.js</div>
+            <div class="skill-item"><span class="skill-logo express">ex</span> Express.js</div>
+            <div class="skill-item"><span class="skill-logo django">Dj</span> Django</div>
+            <div class="skill-item"><span class="skill-logo php">php</span> PHP</div>
+            <div class="skill-item"><span class="skill-logo api">API</span> REST APIs</div>
+            <div class="skill-item"><span class="skill-logo java">J</span> Java</div>
+          </div>
+        </div>
+        <div class="skills-section">
+          <h4>DATABASE &amp; TOOLS</h4>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-logo postgres">Pg</span> PostgreSQL</div>
+            <div class="skill-item"><span class="skill-logo sqlite">Sq</span> SQLite</div>
+            <div class="skill-item"><span class="skill-logo mysql">My</span> MySQL</div>
+            <div class="skill-item"><span class="skill-logo git">Git</span> Git</div>
+            <div class="skill-item"><span class="skill-logo docker">D</span> Docker</div>
+            <div class="skill-item"><span class="skill-logo figma">F</span> Figma</div>
+            <div class="skill-item"><span class="skill-logo postman">P</span> Postman</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-panel">
+        <div class="right-header">DETAILS</div>
+        <div class="details-list">
+          <div class="detail-item">
+            <span class="detail-icon">&#128205;</span>
+            <div>
+              <strong>Location</strong>
+              <p>Naparaan, Salcedo Eastern Samar</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">&#127891;</span>
+            <div>
+              <strong>Education</strong>
+              <p>BSIT — ESSU-Salcedo</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">&#127942;</span>
+            <div>
+              <strong>Awards</strong>
+              <p>Best in OJT — ESSU-Salcedo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-panel">
+        <div class="right-header">CONTACT</div>
+        <div class="contact-list">
+          <a href="mailto:ambert.cordero.dev@gmail.com" class="contact-item">
+            <span class="contact-icon-sm">&#9993;</span> corderoambert1996@gmail.com
+          </a>
+          <a href="tel:+639123456789" class="contact-item">
+            <span class="contact-icon-sm">&#128222;</span> +63 912 345 6789
+          </a>
+          <a href="https://linkedin.com/in/ambertcordero" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon-sm linkedin">in</span> /in/ambertcordero
+          </a>
+          <a href="https://github.com/ambertcordero" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon-sm github">&#9679;</span> /ambertcordero
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Mobile Info Panel (bottom sheet) -->
+    <aside class="mobile-panel" id="mobilePanel" aria-hidden="true">
+      <div class="mobile-panel-handle" aria-hidden="true"></div>
+      <div class="mobile-panel-header">
+        <span>SKILLS &amp; CONTACT</span>
+        <button class="mobile-panel-close" id="mobilePanelClose" type="button" aria-label="Close panel">&times;</button>
+      </div>
+      <div class="mobile-panel-content" id="mobilePanelContent"></div>
+    </aside>
+    <div class="mobile-panel-overlay" id="mobilePanelOverlay" aria-hidden="true"></div>
+
+    <!-- Project Detail Modal -->
+    <div class="project-modal-overlay" id="projectModalOverlay" aria-hidden="true"></div>
+
+    <!-- Fullscreen Image Lightbox -->
+    <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+      <button type="button" class="image-lightbox-close" id="imageLightboxClose"
+        aria-label="Close full view">&times;</button>
+      <button type="button" class="image-lightbox-nav image-lightbox-prev" id="imageLightboxPrev"
+        aria-label="Previous image">&#8249;</button>
+      <div class="image-lightbox-stage">
+        <img id="imageLightboxImg" src="" alt="">
+      </div>
+      <button type="button" class="image-lightbox-nav image-lightbox-next" id="imageLightboxNext"
+        aria-label="Next image">&#8250;</button>
+      <span class="image-lightbox-counter" id="imageLightboxCounter"></span>
+    </div>
+
+    <dialog class="project-modal" id="projectModal" aria-labelledby="projectModalTitle">
+      <div class="project-modal-header">
+        <div class="project-modal-tabs">
+          <span class="project-modal-tab active">
+            <span class="tab-icon html">&lt;&gt;</span>
+            <span id="projectModalTabName">project.html</span>
+          </span>
+        </div>
+        <button type="button" class="project-modal-close" id="projectModalClose"
+          aria-label="Close project">&times;</button>
+      </div>
+      <div class="project-modal-body">
+        <div class="project-modal-preview" id="projectModalPreview">
+          <button type="button" class="carousel-btn carousel-prev" id="carouselPrev"
+            aria-label="Previous image">&#8249;</button>
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carouselTrack"></div>
+          </div>
+          <button type="button" class="carousel-btn carousel-next" id="carouselNext"
+            aria-label="Next image">&#8250;</button>
+          <div class="carousel-dots" id="carouselDots"></div>
+          <span class="carousel-counter" id="carouselCounter">1 / 3</span>
+          <button type="button" class="carousel-expand" id="carouselExpand" title="View full size"
+            aria-label="View full size">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+            </svg>
+          </button>
+        </div>
+        <div class="project-modal-content">
+          <h2 id="projectModalTitle">Project Name</h2>
+          <span class="code-comment" id="projectModalYear">// 2024</span>
+          <p id="projectModalDescription"></p>
+          <h3 class="project-modal-subtitle">Features</h3>
+          <ul class="project-modal-features" id="projectModalFeatures"></ul>
+          <div class="tech-tags" id="projectModalTags"></div>
+          <div class="project-modal-actions">
+            <a href="#" class="btn btn-primary" id="projectModalGithub" target="_blank" rel="noopener">
+              <span class="btn-icon">&#9679;</span> View on GitHub
+            </a>
+            <a href="#" class="btn btn-secondary" id="projectModalDemo" target="_blank" rel="noopener">
+              <span class="btn-icon">&gt;_</span> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Status Bar -->
+    <footer class="status-bar">
+      <div class="status-left">
+        <span class="status-item branch">
+          <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14">
+            <path
+              d="M11.75 2.5a2.25 2.25 0 1 0 .001 4.501 2.25 2.25 0 0 0-.001-4.501zm-2.25 4.501v1.876a3.752 3.752 0 0 1-1.5.75V13.5a1.5 1.5 0 0 1-3 0v-3.873a3.752 3.752 0 0 1-1.5-.75V7.001a2.25 2.25 0 1 1 2.25-2.25h1.5a2.25 2.25 0 0 1 2.25 2.25v.001z" />
+          </svg>
+          <span class="status-text">main</span>
+        </span>
+        <span class="status-item sync">
+          <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14">
+            <path
+              d="M8 1.5a6.5 6.5 0 1 0 3.328 12.11l-1.016-1.016A5 5 0 1 1 8 3.5V1l3.5 3.5L8 8V5.5a3 3 0 1 0 2.828 4.172H8v1.5h4.328A4.5 4.5 0 0 0 8 1.5z" />
+          </svg>
+        </span>
+      </div>
+      <div class="status-right">
+        <span class="status-item status-hide-sm" id="statusCursor">Ln 1, Col 1</span>
+        <span class="status-item status-hide-sm">UTF-8</span>
+        <span class="status-item">HTML</span>
+        <span class="status-item">
+          <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14">
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0z" />
+            <path d="M7.25 4v4.69l3.22 1.92.78-1.3-2.5-1.5V4h-1.5z" />
+          </svg>
+          <span id="statusTime"></span>
+        </span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
